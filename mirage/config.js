@@ -27,4 +27,10 @@ export default function() {
   this.get('/artists', (schema) => {
     return schema.artists.all();
   });
+
+  this.get('/artists/:id', (schema, request) => {
+    let id = request.params.id;
+
+    return schema.artists.find(id);
+  });
 }

@@ -1,0 +1,5 @@
+{{#each this.model as |artist|}}
+  <p><img src="{{artist.image}}" width="50" height="50" /> <LinkTo @route="artists.detail" @model="{{artist.id}}" >{{artist.name}}</LinkTo> - Born: {{artist.dateOfBirth}}</p>
+{{else}}
+  <p>There aren't any artists in the database yet</p>
+{{/each}}
