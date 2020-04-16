@@ -1,0 +1,7 @@
+<h1>Artists</h1>
+
+{{#each this.model as |artist|}}
+  <p><img src="{{artist.image}}" width="50" height="50" /> {{artist.name}} - Born: {{artist.dateOfBirth}}</p>
+{{else}}
+  <p>There aren't any artists in the database yet</p>
+{{/each}}
